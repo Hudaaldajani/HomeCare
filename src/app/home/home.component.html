@@ -1,0 +1,23 @@
+<div class="container"
+    fxLayout="row"
+    fxLayout.sm="column"
+    fxLayout.xs="column"
+    fxLayoutAlign.gt-md="center none"
+    fxLayoutGap="10px" 
+    fxLayoutGap.xs="0">
+
+    
+<h1 fxFlex=100  [@expand]>How can we help you?</h1>
+
+
+<!-- <a [routerLink]="['/maintenanceSevice']" routerLinkActive="active">
+<button fxFlex class="button button1" fxFlex=20>Maintenance</button></a>
+<a [routerLink]="['/cleaningService']" routerLinkActive="active">
+<button fxFlex class="button button1" fxFlex=20>Cleaning</button></a> -->
+
+
+
+<a mat-button class="mat-button button1" routerLink='/maintenanceService' routerLinkActive="active" fxFlex=20  [@expand]>Maintenance</a>
+<a mat-button class="mat-button button1" routerLink='/cleaningService' routerLinkActive="active"fxFlex=20  [@expand]>Cleaning</a>
+</div>
+

@@ -1,0 +1,310 @@
+{
+  "categories": [
+    {
+      "category": 1,
+      "categoryname": "Maintenance",
+      "categoryimage": "images/Maintenance.jpg",
+      "categoryparagraph": "We offer you the best maintenance services for several common problems that you will face across your residence."
+    },
+    {
+      "category": 2,
+      "categoryname": "Cleaning",
+      "categoryimage": "images/Cleaning.jpg",
+      "categoryparagraph": "We offer you the best cleaning services for several common problems that you will face across your residence."
+    }
+  ],
+  "jobs": [
+    {
+      "cols": 1,
+      "rows": 1,
+      "id": "0",
+      "name": "AC SERVING",
+      "image": "images/ACServing.jpg",
+      "category": 1,
+      "categoryname": "Maintenance",
+      "categoryimage": "images/Maintenance.jpg",
+      "price": 200,
+      "title": "AC SERVICING & REPAIR",
+      "paragraphs": [
+        {
+          "paragraph": "Whilst we love the UAE weather, if the AC fails your home can quickly become unbearable."
+        },
+        {
+          "paragraph": "This is especially true if you have young children and we know that if you call us with AC issues, you need a fast and reliable service that you can trust."
+        },
+        {
+          "paragraph": "For this reason, whether you need your AC repaired or serviced you can rest assured that we always warranty our work."
+        },
+        {
+          "paragraph": "Water and electricity are a dangerous combination and AC maintenance issues should only be looked after by trained professionals."
+        }
+      ]
+    },
+    {
+      "cols": 1,
+      "rows": 1,
+      "id": "1",
+      "name": "DUCT CLEANING",
+      "image": "images/DuctCleaning.jpg",
+      "category": 1,
+      "categoryname": "Maintenance",
+      "categoryimage": "images/Maintenance.jpg",
+      "price": 300,
+      "title": "DUCT CLEANING",
+      "paragraphs": [
+        {
+          "paragraph": "According to the Environment Protection Agency (EPA), indoor air pollution remains a significant modern health concern."
+        },
+        {
+          "paragraph": "As dust, dirt, mold and other harmful substances accumulate in ducts and coils of home air systems, it can have a significant impact on the quality of the air we breathe."
+        },
+        {
+          "paragraph": "Dirty and mouldy ducts have been shown to contribute towards a wide range of health problems and are particularly for patients with respiratory conditions."
+        },
+        {
+          "paragraph": "Any air duct system that hasn’t been inspected for more than six months or cleaned could have inadvertently become a breeding ground for harmful contaminants and bacteria."
+        }
+      ]
+    },
+    {
+      "cols": 1,
+      "rows": 1,
+      "id": "2",
+      "name": "COIL CLEANING",
+      "image": "images/CoilCleaning.jpg",
+      "category": 1,
+      "categoryname": "Maintenance",
+      "categoryimage": "images/Maintenance.jpg",
+      "price": 300,
+      "title": "COIL CLEANING",
+      "paragraphs": [
+        {
+          "paragraph": "Does your home feel hot and stuffy despite your air conditioning unit being set on high? If so, a dirty AC coil could be to blame. "
+        },
+        {
+          "paragraph": "An AC evaporator coil is a crucial part of your AC system, with air flowing through it to cool to the desired temperature. "
+        },
+        {
+          "paragraph": "Unfortunately, condensation that naturally forms on the coil can cause fine dirt and debris to become stuck to it. "
+        },
+        {
+          "paragraph": "Not only can these deposits affect the effectiveness of your unit and your overall air quality,  they can also trigger allergies and respiratory problems in the occupants of your home."
+        }
+      ]
+    },
+    {
+      "cols": 1,
+      "rows": 1,
+      "id": "3",
+      "name": "CAR CLEANING",
+      "image": "images/CarCleaning.jpg",
+      "category": 2,
+      "categoryname": "Cleaning",
+      "categoryimage": "images/Cleaning.jpg",
+      "price": 300,
+      "title": "CAR CLEANING",
+      "paragraphs": [
+        {
+          "paragraph": "We all love a nice & clean ride. The regular car is most important to keep your cars sparkling."
+        },
+        {
+          "paragraph": "Car wash in UAE can be a time-consuming task. Most of the residents in the UAE own a personal vehicle for commute and face the same problem."
+        },
+        {
+          "paragraph": "Which is why we have come up with the car wash Portal. We cannot stress enough on a regular car wash in UAE."
+        },
+        {
+          "paragraph": "It is most important to clean your ride regularly to keep it dirt free and maintain the look and feel of the vehicle."
+        }
+      ]
+    },
+    {
+      "cols": 1,
+      "rows": 1,
+      "id": "4",
+      "name": "HOME CLEANING",
+      "image": "images/HomeCleaning.jpg",
+      "category": 2,
+      "categoryname": "Cleaning",
+      "categoryimage": "images/Cleaning.jpg",
+      "price": 300,
+      "title": "HOME CLEANING",
+      "paragraphs": [
+        {
+          "paragraph": "Your health to your moods and even your relationships are affected by the cleanliness of your home and office."
+        },
+        {
+          "paragraph": "Through Us, you can now schedule a professional team to come and ensure your home is cleaned thoroughly, efficiently and in a cost-effective way, based on your schedule!"
+        },
+        {
+          "paragraph": "We remove the hassle of having to call multiple companies and to understand the differences in offerings, whilst also removing the trouble of having overcharged."
+        },
+        {
+          "paragraph": "Choose your appointment based on your own schedule,is just a tiny portion of what HomeCare is about."
+        }
+      ]
+    },
+    {
+      "cols": 1,
+      "rows": 1,
+      "id": "5",
+      "name": "GARDEN CLEANING",
+      "image": "images/GardenCleaning.jpg",
+      "category": 2,
+      "categoryname": "Cleaning",
+      "categoryimage": "images/Cleaning.jpg",
+      "price": 300,
+      "title": "GARDEN CLEANING",
+      "paragraphs": [
+        {
+          "paragraph": "A clean house or starts with the immediate outdoor environment, so a clean garden will have an immediate effect on your well being."
+        },
+        {
+          "paragraph": "Pure Zone Cleaning Services provide a full line of outdoor cleaning service."
+        },
+        {
+          "paragraph": "Our technicians use professional High-pressure washer machines, also for outdoor furniture as well as in removing dirt from various surfaces."
+        },
+        {
+          "paragraph": "To let you enjoy the outdoor life around your house, we will perform the following outdoor cleaning work."
+        }
+      ]
+    }
+  ],
+  "leadership": [
+    {
+      "id": "0",
+      "name": "Peter Pan",
+      "image": "images/rafaelo.png",
+      "designation": "Managing Partner",
+      "featured": false,
+      "abbr": "CEO",
+      "description": "Our CEO, Peter, credits his hardworking East Asian immigrant parents who undertook the arduous journey to the shores of America with the intention of giving their children the best future. His mother's wizardy in the kitchen whipping up the tastiest dishes with whatever is available inexpensively at the supermarket, was his first inspiration to create the fusion cuisines for which The Frying Pan became well known. He brings his zeal for fusion cuisines to this restaurant, pioneering cross-cultural culinary connections."
+    },
+    {
+      "id": "1",
+      "name": "Dhanasekaran Witherspoon",
+      "image": "images/alberto.png",
+      "designation": "General Manager",
+      "featured": false,
+      "abbr": "CFO",
+      "description": "Our CFO, Danny, as he is affectionately referred to by his colleagues, comes from a long established family tradition in farming and produce. His experiences growing up on a farm in the Australian outback gave him great appreciation for varieties of food sources. As he puts it in his own words, Everything that runs, wins, and everything that stays, pays!"
+    },
+    {
+      "id": "2",
+      "name": "Agumbe Tang",
+      "image": "images/john.png",
+      "designation": "Bookings Manager",
+      "featured": false,
+      "abbr": "CTO",
+      "description": "Blessed with the most discerning gustatory sense, Agumbe, our CFO, personally ensures that every dish that we serve meets his exacting tastes. Our chefs dread the tongue lashing that ensues if their dish does not meet his exacting standards. He lives by his motto, You click only if you survive my lick."
+    },
+    {
+      "id": "3",
+      "name": "Alberto Somayya",
+      "image": "images/aeron.png",
+      "designation": "Head of Finance & Admin",
+      "featured": true,
+      "abbr": "EC",
+      "description": "Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!"
+    }
+  ],
+  "request": [
+    {
+      "firstname": "Huda",
+      "lastname": "Rabeh",
+      "telnum": "1234567",
+      "email": "huda@aol.com",
+      "requestedservicename": "CAR CLEANING",
+      "id": 1
+    },
+    {
+      "firstname": "Rose",
+      "lastname": "Mazen",
+      "telnum": "12342343",
+      "email": "rose1234@aol.com",
+      "requestedservicename": "GARDEN CLEANING",
+      "id": 2
+    },
+    {
+      "firstname": "Malak",
+      "lastname": "Rabeh",
+      "telnum": "12345678",
+      "email": "mala@a.com",
+      "requestedservicename": "HOME CLEANING",
+      "id": 3
+    },
+    {
+      "firstname": "Kawthar",
+      "lastname": "Rabeh",
+      "telnum": "12345678",
+      "email": "kawthar@basher.com",
+      "requestedservicename": "GARDEN CLEANING",
+      "id": 4
+    },
+    {
+      "firstname": "Raja",
+      "lastname": "basher",
+      "telnum": "12345678",
+      "email": "raja@qol.com",
+      "requestedservicename": "GARDEN CLEANING",
+      "id": 5
+    },
+    {
+      "firstname": "Huda",
+      "lastname": "Amon",
+      "telnum": "123",
+      "email": "huda@amon.com",
+      "requestedservicename": "COIL CLEANING",
+      "id": 6
+    },
+    {
+      "firstname": "tt",
+      "lastname": "Rabeh",
+      "telnum": "12345678",
+      "email": "tt@test.com",
+      "requestedservicename": "COIL CLEANING",
+      "id": 7
+    },
+    {
+      "firstname": "jana",
+      "lastname": "Amir",
+      "telnum": "12345678",
+      "email": "jana@aol.om",
+      "requestedservicename": "COIL CLEANING",
+      "id": 8
+    },
+    {
+      "firstname": "Alan",
+      "lastname": "Camel",
+      "telnum": "123",
+      "email": "alan.camel@hotmail.com.com",
+      "requestedservicename": "AC SERVING",
+      "id": 9
+    },
+    {
+      "firstname": "Marah",
+      "lastname": "Sameer",
+      "telnum": "12345678",
+      "email": "marah.sameer@hotmail.com",
+      "requestedservicename": "CAR CLEANING",
+      "id": 10
+    },
+    {
+      "firstname": "Marah",
+      "lastname": "Sameer",
+      "telnum": "12345678",
+      "email": "marah.sameer@hotmail.com",
+      "requestedservicename": "CAR CLEANING",
+      "id": 11
+    },
+    {
+      "firstname": "Shaima",
+      "lastname": "Ali",
+      "telnum": "65665655",
+      "email": "shaima.ali@hotmail.com",
+      "requestedservicename": "CAR CLEANING",
+      "id": 12
+    }
+  ]
+}

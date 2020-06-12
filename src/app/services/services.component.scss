@@ -1,0 +1,49 @@
+.link{
+    text-decoration:none;
+    color:rebeccapurple;
+    text-align: left;
+}
+
+.link:hover{
+    color: blue;
+  }
+
+  p{
+    text-decoration:none;
+    color:black;
+    text-align: left;
+  } 
+
+
+h1{
+    font-weight: bold;
+}
+
+h1 a{
+    font-weight:normal;
+    font-family:sans-serif;
+}
+
+.overlay {
+    position:relative;
+    width:450px;
+    height:auto;
+}
+.overlay img {
+    width:100%;
+    vertical-align:top;
+}
+.overlay:after {
+    content:'';
+    position:absolute;
+    width:100%; 
+    height:100%;
+    top:0; left:0;
+    background:rebeccapurple;
+    opacity:0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+.overlay:hover:after {
+    opacity:0.3;
+}

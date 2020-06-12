@@ -1,0 +1,55 @@
+<div class="container"
+    fxLayout="row"
+    fxLayout.sm="column"
+    fxLayout.xs="column"
+    fxLayoutAlign.gt-md="center none"
+    fxLayoutGap="100px" 
+    fxLayoutGap.xs="0" >
+
+<div *ngFor="let c of categories">
+<mat-card *ngIf="c.category === 1" routerLink='/maintenanceService' [@expand]>
+    <div class="overlay">
+    <img src="{{baseURL+c.categoryimage}}" alt="Maintenace Services" style="height: 500px; width:450px;">
+    </div>
+    <mat-card-header>
+        <mat-card-title>
+        <h1>Maintenance</h1>
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p style="max-width: 300px;">
+            {{c.categoryparagraph}}
+        </p>
+        <h1><a class="link" routerLink='/maintenanceService'routerLinkActive="active">Need Maintenance?</a></h1>
+    </mat-card-content> 
+    </mat-card>
+
+
+    <mat-card  *ngIf="c.category === 2" routerLink='/cleaningService' [@expand]>
+        <div class="overlay">
+        <img src="{{baseURL+c.categoryimage}}" alt="Cleaning Services"  style="height: 500px; width:450px;">
+        </div>
+        <mat-card-header>
+            <mat-card-title>
+            <h1>Cleaning</h1>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p style="max-width: 300px;">
+                {{c.categoryparagraph}}
+            </p>
+            <h1><a class="link" routerLink='/cleaningService'routerLinkActive="active">Need Cleaning?</a></h1>
+        </mat-card-content> 
+        </mat-card>
+
+    </div>
+    <div [hidden]="categories || errMess">
+        <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
+      </div>
+      <div fxFlex *ngIf="errMess">
+        <h2>Error</h2>
+        <h4>{{errMess}}</h4>
+      </div>
+</div>
+
+

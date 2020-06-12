@@ -1,0 +1,41 @@
+<div  class="container"
+fxLayout="row"
+fxLayout.sm="column"
+fxLayout.xs="column"
+fxLayoutAlign.gt-md="center none"
+fxLayoutGap="10px" 
+fxLayoutGap.xs="0">
+
+
+  <div fxFlex="30">
+     <h2>Contact Us</h2>
+    <h3>Location Information</h3> 
+    <div fxLayout="column" fxLayout.gt-sm="row">
+      <div fxFlex="50" fxFlexOffset="50px">
+        <h4>Our Address</h4>
+        <address>
+          121, Abdullah Omran Taryam Street<br>
+          Al Sofouh, Dubai<br>
+          UNITED ARAB EMIRATES<br>
+          <i class="fa fa-phone"></i>: +971 4123 4567<br>
+          <i class="fa fa-fax"></i>: +971 44123 4567<br>
+          <i class="fa fa-envelope"></i>: 
+                <a href="mailto:homecare@home.ae">homecare@home.ae</a>
+        </address>
+        <p></p>
+        <div>
+          <a mat-raised-button href="tel:+85212345678"><i class="fa fa-phone"></i> Call</a>
+          <a mat-raised-button href="skype:echo123?call"><i class="fa fa-skype"></i> Skype</a>
+          <a mat-raised-button  href="mailto:homecare@home.ae"><i class="fa fa-envelope-o"></i> Email</a>
+        </div>
+        </div>
+    </div>
+  </div>
+  <div fxFlex="30">
+    <h2>Our Location Map</h2>
+    <agm-map [latitude]="lat" [longitude]="lng" (mapClick)="onChoseLocation($event)">
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+    </agm-map>
+  </div>
+</div>
+

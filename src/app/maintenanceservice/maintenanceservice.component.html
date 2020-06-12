@@ -1,0 +1,57 @@
+<div class="containerlist"
+     fxLayout="column"
+     fxLayoutGap="10px">
+
+    <div fxFlex>
+        <h1 class="up">PROPERTY & HOME MAINTENANCE SERVICES</h1>
+        <h2 class="down">What is your service?</h2>
+
+     </div>
+
+     <!-- [gutterSize]="'170px'"> -->
+     <div fxFlex *ngIf="jobs" [@expand]>
+     <mat-grid-list cols="3" rowHeight="293px" [gutterSize]="'10px'">
+         <div *ngFor="let job of jobs" >
+         <mat-grid-tile 
+         *ngIf="job.category === 1" 
+         [colspan]="job.cols"
+         [rowspan]="job.rows"
+         [routerLink]="['/jobdetail', job.id]"
+         class="itemcontainer"
+         tabindex="1">
+            <img  height="293px" src="{{baseURL+job.image}}" alt={{job.name}} >
+            <div class="overlay">
+            </div>
+              <mat-grid-tile-footer fxFlex>
+                 <h1>{{job.name}}</h1>
+             </mat-grid-tile-footer>
+            </mat-grid-tile>
+        </div>
+    </mat-grid-list>
+    </div>
+</div>
+<div [hidden]="jobs || errMess">
+    <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
+  </div>
+  <div fxFlex *ngIf="errMess">
+    <h2>Error</h2>
+    <h4>{{errMess}}</h4>
+  </div>
+<div>
+    <div class="flex-container">
+        <a routerLink="/services">
+        <button mat-icon-button color="primary" style="font-size: 20px;">
+          <mat-icon>arrow_back</mat-icon>
+          Back to All Services
+        </button>
+        </a>
+      </div>
+    <!-- <app-jobdetail [job]="selectedJob"></app-jobdetail> -->
+</div>
+
+
+
+
+
+ 
+
