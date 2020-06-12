@@ -81,7 +81,7 @@ export class JobdetailComponent implements OnInit {
     //
     private firestore: AngularFirestore,
     //
-    private toastr: ToastrService,
+    private toast: ToastrService,
     //
     @Inject('BaseURL') public baseURL) {
 
@@ -155,6 +155,7 @@ export class JobdetailComponent implements OnInit {
                   console.log(this.request);
                   setTimeout(() => {
                     this.request = null;
+                    this.toast.success('Submitted Successfully','Service Request');
                   }, 5000);
               }
             , 2000);
@@ -167,7 +168,6 @@ export class JobdetailComponent implements OnInit {
       email: '',
       requestedservicename:''
     });
-    this.toastr.success('Submitted Successfully','Service Request');
 
    // requestedservicename:this.job.name
 

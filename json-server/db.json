@@ -211,100 +211,12 @@
   ],
   "request": [
     {
-      "firstname": "Huda",
+      "firstname": "Grana",
       "lastname": "Rabeh",
-      "telnum": "1234567",
-      "email": "huda@aol.com",
-      "requestedservicename": "CAR CLEANING",
+      "telnum": "12345678",
+      "email": "grana@aol.com",
+      "requestedservicename": "DUCT CLEANING",
       "id": 1
-    },
-    {
-      "firstname": "Rose",
-      "lastname": "Mazen",
-      "telnum": "12342343",
-      "email": "rose1234@aol.com",
-      "requestedservicename": "GARDEN CLEANING",
-      "id": 2
-    },
-    {
-      "firstname": "Malak",
-      "lastname": "Rabeh",
-      "telnum": "12345678",
-      "email": "mala@a.com",
-      "requestedservicename": "HOME CLEANING",
-      "id": 3
-    },
-    {
-      "firstname": "Kawthar",
-      "lastname": "Rabeh",
-      "telnum": "12345678",
-      "email": "kawthar@basher.com",
-      "requestedservicename": "GARDEN CLEANING",
-      "id": 4
-    },
-    {
-      "firstname": "Raja",
-      "lastname": "basher",
-      "telnum": "12345678",
-      "email": "raja@qol.com",
-      "requestedservicename": "GARDEN CLEANING",
-      "id": 5
-    },
-    {
-      "firstname": "Huda",
-      "lastname": "Amon",
-      "telnum": "123",
-      "email": "huda@amon.com",
-      "requestedservicename": "COIL CLEANING",
-      "id": 6
-    },
-    {
-      "firstname": "tt",
-      "lastname": "Rabeh",
-      "telnum": "12345678",
-      "email": "tt@test.com",
-      "requestedservicename": "COIL CLEANING",
-      "id": 7
-    },
-    {
-      "firstname": "jana",
-      "lastname": "Amir",
-      "telnum": "12345678",
-      "email": "jana@aol.om",
-      "requestedservicename": "COIL CLEANING",
-      "id": 8
-    },
-    {
-      "firstname": "Alan",
-      "lastname": "Camel",
-      "telnum": "123",
-      "email": "alan.camel@hotmail.com.com",
-      "requestedservicename": "AC SERVING",
-      "id": 9
-    },
-    {
-      "firstname": "Marah",
-      "lastname": "Sameer",
-      "telnum": "12345678",
-      "email": "marah.sameer@hotmail.com",
-      "requestedservicename": "CAR CLEANING",
-      "id": 10
-    },
-    {
-      "firstname": "Marah",
-      "lastname": "Sameer",
-      "telnum": "12345678",
-      "email": "marah.sameer@hotmail.com",
-      "requestedservicename": "CAR CLEANING",
-      "id": 11
-    },
-    {
-      "firstname": "Shaima",
-      "lastname": "Ali",
-      "telnum": "65665655",
-      "email": "shaima.ali@hotmail.com",
-      "requestedservicename": "CAR CLEANING",
-      "id": 12
     }
   ]
 }
