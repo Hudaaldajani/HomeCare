@@ -62,3 +62,74 @@ $background-pale: #D1C4E9;
       font-size:45px;
     }
 }
+
+button.mat-menu-item:hover {
+  background-color: $background-light;
+  color: $lt-gray !important;
+}
+
+button.mat-menu-item {
+  background-color:#fff;
+  color: #000;
+  font-size: 16px;
+}
+
+.active {
+ color: yellow;
+}
+
+/* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1281px)  {
+  div.container{height: 300px;}
+  div.jumbotron.bg-cover{margin: 0px auto;padding: 70px 30px;padding-top: 0px; height: 300px;}
+  div.overlay{text-align: center;color: #fde8ff;height:300px;}
+  div > div > div > img {width: 70px;height: 70px;}
+  div > div > div > div {margin-bottom: 20px;margin-top: 20px;height:15px;}
+  div > div > div > div > h1{font-size: 70px;text-shadow:none;margin-top: 40px;text-align: center;}
+  div > div > div > div > h2{font-size: 25px;text-align: center;}
+}
+
+/* Phones */
+@media only screen and (max-width: 767px) {
+  mat-toolbar > mat-toolbar-row > span > img{height:25px;width:25px;}
+  div.container{height: 160px;}
+  div.jumbotron.bg-cover{margin: 0px auto;padding: 70px 30px;padding-top: 90px;}
+  div.overlay{text-align: center;color: #fde8ff;height:160px;}
+  div > div > div > img {width: 30px;height: 30px;}
+  div > div > div > div {margin-bottom: 0px;height:15px;}
+  div > div > div > div > h1{font-size: 20px;text-shadow:none;margin-bottom: 0px;text-align: center;}
+  div > div > div > div > h2{font-size: 16px;text-align: center;}
+}
+
+/* Portrait Phones */
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+  mat-toolbar > mat-toolbar-row > span > img{height:25px;width:25px;}
+  div.container{height: 160px;}
+  div.jumbotron.bg-cover{margin: 0px auto;padding: 70px 30px;padding-top: 90px;}
+  div.overlay{text-align: center;color: #fde8ff;height:160px;}
+  div > div > div > img {width: 30px;height: 30px;}
+  div > div > div > div {margin-bottom: 0px;height:15px;}
+  div > div > div > div > h1{font-size: 20px;text-shadow:none;margin-bottom: 0px;text-align: center;}
+  div > div > div > div > h2{font-size: 14px;text-align: center;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+// @media (max-width: 961px) {
+//   div.container{height: 160px;}
+//   div.jumbotron.bg-cover{margin: 0px auto;padding: 70px 30px;padding-top: 90px;}
+//   div.overlay{text-align: center;color: #fde8ff;height: 160px;}
+//   div > div > div > img {width: 30px;height: 30px;padding-top: 15px;}
+// } 
+

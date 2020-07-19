@@ -5,6 +5,9 @@ import {catchError } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { baseURL } from '../shared/baseurl';
 import { ProcessHTTPMsgService } from './process-httpmsg.service';
+import {AngularFireDatabase, AngularFireList, AngularFireObject} from '@angular/fire/database';
+import {formatDate} from '@angular/common';
+import {database} from 'firebase';
 
 
 @Injectable({
@@ -12,8 +15,32 @@ import { ProcessHTTPMsgService } from './process-httpmsg.service';
 })
 export class RequestService {
 
+
+  requests: AngularFireList<Request>;
+
+
   constructor(private http: HttpClient,
-    private processHTTPMsgService: ProcessHTTPMsgService) { }
+    private processHTTPMsgService: ProcessHTTPMsgService,
+    private angularFireDatabase: AngularFireDatabase) { }
+
+
+    createRequest(request: Request): database.ThenableReference {
+      const now = formatDate(new Date(), 'HH:mm:ss dd/MM/yyyy', 'en-US');
+      const requestObj = {
+        firstname: request.firstname,
+        lastname: request.lastname,
+        telnum: request.telnum,
+        email: request.email,
+        requestedservicename:request.requestedservicename
+      };
+  
+      if (this.requests == null) {
+        return this.angularFireDatabase.database.ref('/requests').push(requestObj);
+      } else {
+        return this.requests.push(requestObj);
+      }
+    }
+  
 
   submitRequest(request: Request[]): Observable<Request>{
     const httpOptions = {

@@ -8,8 +8,9 @@ import { Request} from "../shared/request";
 import { RequestService } from '../services/request.service';
 import { switchMap } from 'rxjs/operators';
 import { visibility, flyInOut , expand } from '../animations/app.animation';
-import { AngularFirestore } from '@angular/fire/firestore';
 import { ToastrService } from 'ngx-toastr';
+import { JobParagraph } from '../shared/jobParagraph';
+import { AngularFirestore } from "@angular/fire/firestore";
 
 
 
@@ -29,7 +30,12 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class JobdetailComponent implements OnInit {
 
-    job : Job;
+
+    show:boolean = false;
+    buttonName:any = 'Read More ...';
+
+    job : Job; 
+    paragraphs : JobParagraph[]= [];
     // jobIds: string[];
     // prev: string;
     // next: string;
@@ -73,6 +79,8 @@ export class JobdetailComponent implements OnInit {
     };
 
 
+
+
   constructor(private jobService: JobService,
     private requestService: RequestService,
     private route: ActivatedRoute,
@@ -89,10 +97,64 @@ export class JobdetailComponent implements OnInit {
      }
 
   ngOnInit(): void {
-    const id = +this.route.snapshot.params['id'];
-    this.jobService.getJob(id.toString())
-     .subscribe((job) => this.job = job,
-    errmess => this.errMess = <any>errmess);
+
+     // this.route.snapshot.paramMap.get('id');
+    // this.route.snapshot.params.id
+    this.route.params.subscribe(params => {
+      const id = params.id;
+
+      if (id) {
+        this.jobService.getById(id).snapshotChanges()
+          .subscribe(res => {
+            if ((res.payload.exists())) {
+              console.log('fetched successfully');
+              this.job = res.payload.toJSON() as Job;
+              this.job['$key'] = res.key;
+             // this.job.paragraphs = res.payload.toJSON() as JobParagraph[];
+            } else {
+              console.log('does not exist');
+              //this.router.navigate(['/']);
+            }
+          }, err => {
+            console.log(err.toString());
+            debugger;
+          });
+
+      }
+
+   
+    });
+
+
+
+    // const id = +this.route.snapshot.params['id'];
+    // this.jobService.getJob(id.toString())
+    //  .subscribe((job) => this.job = job,
+    // errmess => this.errMess = <any>errmess);
+}
+
+
+
+
+toggle() {
+  this.show = !this.show;
+
+  // CHANGE THE NAME OF THE BUTTON.
+  if(this.show)  
+    this.buttonName = "...Read Less";
+  else
+    this.buttonName = "Read More ...";
+}
+
+
+
+
+objectValues(obj) {
+  return Object.values(obj);
+}
+
+objectKeys(obj) {
+  return Object.keys(obj);
 }
 
   createForm(){
@@ -100,7 +162,7 @@ export class JobdetailComponent implements OnInit {
       firstname: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(25)] ],
       lastname: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(25)] ],
       telnum: ['', [Validators.required, Validators.pattern] ],
-      email: ['', [Validators.required, Validators.email] ],
+      email: ['', [Validators.required, Validators.email, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")] ],
       requestedservicename:new FormControl('')
     });
 
@@ -139,28 +201,31 @@ export class JobdetailComponent implements OnInit {
   onSubmit() {
     let req = this.requestForm.value;
     //
-    this.firestore.collection('request').add(req);
+    this.requestService.createRequest(req);
+   // this.firestore.collection('request').add(req);
     //
     this.request = this.requestForm.value;
-    console.log(this.request);
+    //console.log(this.request);
       this.showSpinner = true;
-      this.request = this.requestForm.value;
-      this.requests.push(this.request);
-      this.requestService.submitRequest(this.requests)
-    .subscribe(requests => 
-          { setTimeout(() => 
+     this.request = this.requestForm.value;
+     // this.requests.push(this.request);
+    //   this.requestService.submitRequest(this.requests)
+    // .subscribe(requests => 
+    //       {
+             setTimeout(() => 
               {
-                  this.request = requests;
+                this.request = this.requestForm.value;
+                // this.request = requests;
                   this.showSpinner = false;
-                  console.log(this.request);
+                 // console.log(this.request);
                   setTimeout(() => {
                     this.request = null;
-                    this.toast.success('Submitted Successfully','Service Request');
-                  }, 5000);
+                    this.toast.success('We will contact you soon!','Submitted Successfully');
+                  }, 200);
               }
-            , 2000);
-          }
-        );
+            , 200);
+         // }
+       // );
     this.requestForm.reset({
       firstname: '',
       lastname: '',

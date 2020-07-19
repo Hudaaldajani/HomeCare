@@ -1,3 +1,16 @@
+.listshow{
+  display: none;
+}
+.gridshow{
+  display: block;
+}
+
+img{
+  height: 500px;
+  width:450px;
+}
+
+
 .link{
     text-decoration:none;
     color:rebeccapurple;
@@ -24,6 +37,10 @@ h1 a{
     font-family:sans-serif;
 }
 
+mat-card-content > p{
+  max-width: 300px;
+}
+
 .overlay {
     position:relative;
     width:450px;
@@ -33,17 +50,166 @@ h1 a{
     width:100%;
     vertical-align:top;
 }
-.overlay:after {
-    content:'';
-    position:absolute;
-    width:100%; 
-    height:100%;
-    top:0; left:0;
-    background:rebeccapurple;
-    opacity:0;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-}
+
 .overlay:hover:after {
     opacity:0.3;
 }
+
+mat-selection-list{
+  color:rebeccapurple;
+  font-weight: bold;
+}
+
+mat-list-option {
+  margin: 10px;
+  color:rebeccapurple;
+}
+
+mat-list-option[area-selected="true"] {
+  background: rgb(102,51,153);
+}
+
+mat-list-option:hover,mat-list-option:active,
+mat-list-option:visited,mat-list-option:focus,mat-list-option:focus-within{
+   background:rgb(161, 84, 238);
+   color:rgb(255,255,255);
+   font-weight: normal;
+}
+
+div > div.matlist > h1{
+  display: none;
+}
+div > div.matlist > h4.down{
+  display: none;
+}
+
+
+
+      /* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1281px){
+
+        div.container{
+          margin-top: 50px;
+          margin-left: 40px;
+          height: 590px;
+        }
+           
+        div > div.matlist > h4.down{
+          display: none;
+        }
+  
+        div > div.matlist > h1{
+          display: none;
+        }
+
+        h1{
+          color: purple;
+          font-weight: bold;
+          text-align: center;
+          line-height: 60px;
+          font-size: 16px; 
+          }
+
+        h2{
+          margin: 0 0 16px;
+          color: black;
+          font-weight: bold;
+          text-align: center;
+          line-height: 0.8;
+          font-family: CoquetteW00-Light, sans-serif;
+          font-size: 20px; 
+           }
+
+       div.overlay > img{
+         width: 250px;
+         height: 200px;
+          }
+
+        div > mat-card {
+            width: 280px;
+            height: 400px;
+          }
+
+          mat-card {
+            width: 300px;
+            height: 300px;
+          }
+
+          mat-card-content > p{
+            max-width:300px;
+            text-align: justify;
+          }
+
+          
+      .listshow{
+        display: none;
+      }
+      .gridshow{
+        display: block;
+      }
+
+
+    }
+
+    /* Phones */
+@media only screen and (max-width: 767px) {
+
+  div.container{
+    display: flex;
+    height: 400px;
+  }
+
+  div > div{
+    display: none;
+    margin-top: 10px;
+  }
+
+  div > div.matlist > h4.down{
+    color:black;
+    font-weight: bold;
+    text-align: center;
+    line-height:0.8;
+    font-family:CoquetteW00-Light,sans-serif;
+    font-size: 20px;
+    display: block;
+  }
+  
+
+      .listshow{
+        display: block;
+      }
+      .gridshow{
+        display: none;
+      }
+
+      div{
+        height: 250px;
+      }
+
+
+     div > div.matlist > mat-selection-list {
+        color:rebeccapurple;
+        font-weight: bold;
+      }
+      
+      div > div.matlist > mat-selection-list > mat-list-option {
+        margin: 2px;
+        color:rebeccapurple;
+      }
+      
+      div > div.matlist > mat-selection-list > mat-list-option[area-selected="true"] {
+        background: rgb(102,51,153);
+        max-width:98%;
+      }
+      
+      div > div.matlist > mat-selection-list > mat-list-option:hover,
+      mat-list-option:active,mat-list-option:visited,
+      mat-list-option:focus,mat-list-option:focus-within{
+         background:rgb(161, 84, 238);
+         color:rgb(255,255,255);
+         font-weight: normal;
+         max-width:98%;
+      }
+    
+
+    }

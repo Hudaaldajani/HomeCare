@@ -1,55 +1,74 @@
 <div class="container"
-    fxLayout="row"
-    fxLayout.sm="column"
-    fxLayout.xs="column"
-    fxLayoutAlign.gt-md="center none"
+    fxLayout="row"  
+    fxLayout.sm="row"
+    fxLayout.xs="row"
     fxLayoutGap="100px" 
-    fxLayoutGap.xs="0" >
-
+    fxLayoutGap.xs="10px" 
+    fxLayoutGap.sm="50px" 
+    fxLayoutAlign.gt-md="center center"
+    fxLayout.sm="row"
+    fxLayout.xs="column"
+    fxLayoutAlign.gt-sm="center center">
+    
 <div *ngFor="let c of categories">
-<mat-card *ngIf="c.category === 1" routerLink='/maintenanceService' [@expand]>
+<mat-card *ngIf="c.category === 1" routerLink='/maintenanceService' [@expand] class="gridshow">
     <div class="overlay">
-    <img src="{{baseURL+c.categoryimage}}" alt="Maintenace Services" style="height: 500px; width:450px;">
+    <img src={{c.categoryimage}} alt="Maintenace Services">
     </div>
     <mat-card-header>
         <mat-card-title>
-        <h1>Maintenance</h1>
+        <h1>{{c.categoryname}}</h1>
         </mat-card-title>
-    </mat-card-header>
+    </mat-card-header>  
     <mat-card-content>
-        <p style="max-width: 300px;">
+        <p>
             {{c.categoryparagraph}}
         </p>
         <h1><a class="link" routerLink='/maintenanceService'routerLinkActive="active">Need Maintenance?</a></h1>
     </mat-card-content> 
-    </mat-card>
+    </mat-card> 
 
 
-    <mat-card  *ngIf="c.category === 2" routerLink='/cleaningService' [@expand]>
+    <mat-card  *ngIf="c.category === 2" routerLink='/cleaningService' [@expand] class="gridshow">
         <div class="overlay">
-        <img src="{{baseURL+c.categoryimage}}" alt="Cleaning Services"  style="height: 500px; width:450px;">
+        <img src={{c.categoryimage}} alt="Cleaning Services">
         </div>
         <mat-card-header>
             <mat-card-title>
-            <h1>Cleaning</h1>
+              <h1>{{c.categoryname}}</h1>
             </mat-card-title>
         </mat-card-header>
         <mat-card-content>
-            <p style="max-width: 300px;">
+            <p>
                 {{c.categoryparagraph}}
             </p>
             <h1><a class="link" routerLink='/cleaningService'routerLinkActive="active">Need Cleaning?</a></h1>
         </mat-card-content> 
-        </mat-card>
+        </mat-card> 
 
-    </div>
+      </div>
+
+   <div fxLayout="column" class="matlist">
+     <h4 class="down">What is you service?</h4>
+      <mat-selection-list [multiple]="false" *ngFor="let c of categories" class="listshow"> 
+         <mat-list-option *ngIf="c.category === 1" 
+          routerLink='/maintenanceService'>
+          {{c.categoryname}}
+         </mat-list-option>
+         <mat-list-option *ngIf="c.category === 2" 
+         routerLink='/cleaningService'>
+         {{c.categoryname}}
+        </mat-list-option> 
+      </mat-selection-list>
+  </div> 
+
     <div [hidden]="categories || errMess">
         <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
       </div>
       <div fxFlex *ngIf="errMess">
         <h2>Error</h2>
         <h4>{{errMess}}</h4>
-      </div>
-</div>
+      </div> 
+ </div> 
 
 

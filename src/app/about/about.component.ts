@@ -18,14 +18,30 @@ import { flyInOut , expand } from '../animations/app.animation';
 })
 export class AboutComponent implements OnInit {
 
-  leaders:Leader[];
+ // leaders:Leader[];
+
+  leaders:Leader[] = [];
 
   constructor(private leaderService: LeaderService,
     @Inject('BaseURL') public baseURL) { }
 
-  ngOnInit(): void {
-    this.leaderService.getLeaders()
-    .subscribe((leaders)=>this.leaders = leaders);
+  ngOnInit() {
+
+    this.leaderService.getLeadersFireList().snapshotChanges().subscribe(res => {
+      this.leaders.length = 0;
+      res.forEach(l => {
+        const leader = l.payload.toJSON();
+        leader['$key'] = l.key;
+        this.leaders.push(leader as Leader);
+      });
+      console.log('fetched successfully');
+    }, err => {
+      debugger;
+      console.log('An error occurred');
+    });
+
+    // this.leaderService.getLeaders()
+    // .subscribe((leaders)=>this.leaders = leaders);
   }
 
 }

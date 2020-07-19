@@ -1,10 +1,19 @@
+
+.listshow{
+  display: none;
+}
+.gridshow{
+  display: block;
+}
+
+.gridshowi{
+  display: none;
+}
+
 .containerlist {
-  margin: 40px;
-  padding-left: 200px;
-  padding-right: 200px;
-  margin-left: 200px;
-  margin-right: 200px;
-  display:flex;
+  padding: 100px;
+  padding-right: 100px;
+  padding-left: 100px;
 }
 
 
@@ -14,6 +23,7 @@ h1.up{
   text-align: center;
   line-height: 60px;
   margin: 0 !important;
+  display: block;
 
 }
 
@@ -24,20 +34,33 @@ h2.down{
   line-height:0.8;
   font-family:CoquetteW00-Light,sans-serif;
   font-size: 30px;
+  display: block;
+}
+
+h3.up{
+  color:purple;
+  font-weight: bold;
+  text-align: center;
+  line-height: 60px;
+  margin: 0 !important;
+  display: none;
+}
+
+h4.down{
+  color:black;
+  font-weight: bold;
+  text-align: center;
+  line-height:0.8;
+  font-family:CoquetteW00-Light,sans-serif;
+  font-size: 20px;
+  display: none;
 }
 
 
 
-//
-.itemcontainer{
+ .itemcontainer{
   display:flex;
-}
-
-.image {
-//  display: flex;
-  width: 100%;
-  height: auto;
-}
+ }
 
 .overlay {
   position: absolute;
@@ -50,7 +73,7 @@ h2.down{
   opacity: 0;
   transition: .5s ease;
   background-color: rebeccapurple;
- // display: flex;
+  display: flex;
 }
 
 .itemcontainer:hover .overlay {
@@ -59,6 +82,53 @@ h2.down{
 
 .itemcontainer:active .overlay {
   opacity: 0.8;
+}
+
+// mat-selection-list{
+//   color:rebeccapurple;
+//   font-weight: bold;
+// }
+
+// mat-list-option {
+//   margin: 10px;
+//   color:rebeccapurple;
+// }
+
+// mat-list-option[aria-selected="true"] {
+//   background: rgb(102,51,153);
+//  // color:rgb(255,255,255);
+// }
+
+// mat-list-option:hover{
+//    background:rgb(161, 84, 238);
+//    color:rgb(255,255,255);
+//    font-weight: normal;
+// }
+
+mat-selection-list{
+  color:rebeccapurple;
+  font-weight: bold;
+}
+
+mat-list-option {
+  margin: 10px;
+  color:rebeccapurple;
+}
+
+mat-list-option[area-selected="true"] {
+  background: rgb(102,51,153);
+ // color:rgb(255,255,255);
+}
+
+mat-list-option:hover,mat-list-option:active,
+ mat-list-option:visited, mat-list-option:focus,mat-list-option:focus-within{
+   background:rgb(161, 84, 238);
+   color:rgb(255,255,255);
+   font-weight: normal;
+}
+
+div > div.matlist > h1{
+  display: none;
 }
 
 .text {
@@ -75,7 +145,7 @@ h2.down{
 
 .icon-container {
   justify-content: space-between;
-  width: 480px;
+  width: 293px;
   font-size: 20px;
 }
 
@@ -86,3 +156,109 @@ button:hover{
 .mat-icon {
   font-size: 30px;
 }
+
+
+.mat-grid-tile {
+  background:none;
+}
+
+.mat-grid-tile .mat-grid-tile-footer {
+background: black;
+opacity: 0.8;
+}
+
+
+
+
+/* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1281px){
+
+  
+  h1.up{ display:block;} 
+  h2.down{ display: block; }
+  h3.up{ display: none;} 
+  h4.down{ display:none; } 
+
+  .listshow{
+    display: none;
+  }
+  .gridshow{
+    display: none;
+  }
+  .gridshowi{
+    display: block;
+  }
+
+  
+}
+
+/* Phones */
+@media only screen and (max-width: 767px) {
+
+        
+      .containerlist {
+        padding: 10px;
+        padding-right: 100px;
+        padding-left: 100px;
+      }
+      
+     div > div.matlist > h1{
+      font-family:CoquetteW00-Light,sans-serif;
+      margin-top: 15px;
+      margin-left: 10px;
+      margin-bottom: 15px;
+      color: black;
+      font-weight: bolder;
+      display: block;
+      }
+
+      .listshow{
+        display: block;
+      }
+      .gridshow{
+        display: none;
+      }
+      .gridshowi{
+        display: none;
+      }
+
+      div{
+        height:auto;
+      }
+
+     div.matlist > mat-selection-list {
+        color:rebeccapurple;
+        font-weight: bold;
+      }
+      
+      div.matlist > mat-selection-list > mat-list-option {
+        margin: 2px;
+        color:rebeccapurple;
+      }
+      
+      div.matlist > mat-selection-list > mat-list-option[area-selected="true"] {
+        background: rgb(102,51,153);
+        max-width:98%;
+       // color:rgb(255,255,255);
+      }
+      
+     div.matlist > mat-selection-list > mat-list-option:hover,mat-list-option:active,
+     mat-list-option:visited, mat-list-option:focus,mat-list-option:focus-within{
+         background:rgb(161, 84, 238);
+         color:rgb(255,255,255);
+         font-weight: normal;
+         max-width:98%;
+      }
+
+      h1.up{ display: none;} 
+      h2.down{ display: none; }
+      h3.up{ display: block;} 
+      h4.down{ display: block; } 
+      
+}
+
+
+
+
+
+

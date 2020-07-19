@@ -1,4 +1,4 @@
-import { Component, OnInit , Inject } from '@angular/core';
+import { Component, OnInit , Inject, VERSION} from '@angular/core';
 import { Job } from "../shared/job";
 import { JobService } from '../services/job.service';
 import { flyInOut , expand} from '../animations/app.animation';
@@ -18,26 +18,38 @@ import { flyInOut , expand} from '../animations/app.animation';
     ]
 })
 export class CleaningserviceComponent implements OnInit {
-
-  jobs : Job[];
-  // selectedJob : Job;
+  ngVersion: string = VERSION.full;
+  matVersion: string = '5.1.0';
+  breakpoint: number;
+  br: boolean;
+  jobs : Job[] = [];
   errMess: string;
 
-  constructor(private jobsService : JobService,
+  constructor(private jobService : JobService,
     @Inject('BaseURL') public baseURL) { }
 
   ngOnInit(){
-    this.jobsService.getJobs()
-  .subscribe((jobs)=> this.jobs = jobs,
-  errmess => this.errMess = <any>errmess);
+
+    this.jobService.getJobsFireList().snapshotChanges().subscribe(res => {
+      this.jobs.length = 0;
+      res.forEach(j => {
+        const job = j.payload.toJSON();
+        job['$key'] = j.key;
+        this.jobs.push(job as Job);
+      });
+      console.log('fetched successfully');
+    }, err => {
+      debugger;
+      console.log('An error occurred');
+    });
+
+
+    this.breakpoint = (window.innerWidth <= 600) ? 1 : 3;
+    this.br = true;
   }
 
-  // onSelect(job : Job){
-  //   this.selectedJob = job;
-  // }
-
-  // goBack(): void {
-  //   this.location.back();
-  // }
-
+  onResize(event) {
+    this.breakpoint = (event.target.innerWidth <= 600) ? 1 : 3;
+    this.br = false;
+  }
 }

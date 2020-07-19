@@ -1,12 +1,36 @@
 
+.itemlistcontainer {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap row;
+  flex: auto;
+  align-items: center;
+}
+  
+  
+  .no-wrap {
+    display: flex;
+    flex: auto;
+  }
+
+
 .container{
   margin-top: 100px;
   margin-left: 100px;;
 }
 
+div > div.imgcontainer > img{
+  width: 200px;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  display:block;
+}
+
 .formcontainer{
   margin-bottom: 5px;
-  margin-left: 100px;;
+ // margin-left: 100px;
+ //padding-left: 100px;
   margin-top: 30px;
 
 }
@@ -70,5 +94,72 @@
 
 
 
+.btnn {
+  height: 1px;
+  font-size: 15px;;
+  color: blue;
+}
+
+
+
+
+/* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1281px){
+  div.container {
+    margin-top: 10px;
+    margin-left: 10px;
+   }
+  div > div.imgcontainer > img{
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    display:block;
+  }
+  div > div.example> mat-list > h1{
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  div > div.example> mat-list > hr{
+      margin-right: 15px;
+  }
+  div > div.example> mat-list > div > p{
+      margin-right: 15px;
+  }
+  div > div.example> mat-list.mat-list.mat-list{
+      margin-right: 15px;
+  }
+}
+
+/* Phones */
+@media only screen and (max-width: 767px) {
+ div.container {
+  margin-top: 10px;
+  margin-left: 10px;
+ }
+div > div.imgcontainer > img{
+  width: 150px;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  display:block;
+}
+div > div.example> mat-list > h1{
+   margin-right: 10px;
+   font-size: 18px;
+}
+div > div.example> mat-list > hr{
+    margin-right: 15px;
+}
+div > div.example> mat-list > div > p{
+    margin-right: 15px;
+}
+div > div.example> mat-list.mat-list.mat-list{
+    margin-right: 15px;
+}
+
+}
 
 

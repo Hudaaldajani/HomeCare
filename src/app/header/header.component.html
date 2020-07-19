@@ -1,10 +1,39 @@
 <mat-toolbar color="primary">
-    <span><img src="/assets/images/logo.png" height=30 width=30 routerLink='/home'>&nbsp;</span>
-    <a mat-button routerLink='/home'><span class="fa fa-home fa-lg">&nbsp;</span> Home</a>
-    <a mat-button routerLink='/aboutus'><span class="fa fa-info fa-lg">&nbsp;</span> About</a>
-    <a mat-button routerLink='/services'><span class="fa fa-list fa-lg">&nbsp;</span>Services</a>
-    <a mat-button routerLink='/contactus'><span class="fa fa-address-card fa-lg">&nbsp;</span> Contact</a>
-  </mat-toolbar>
+  <mat-toolbar-row fxLayoutAlign="space-between center" *ngIf="!deviceXs" >
+    <div fxLayout="row">
+      <div  fxLayout="row">
+        <span><img src="/assets/images/logo.png" height=30 width=30 routerLink='/home'>&nbsp;</span>
+        <a mat-button routerLink='/home' routerLinkActive="active"><span class="fa fa-home fa-lg">&nbsp;</span> Home</a>
+        <a mat-button routerLink='/aboutus' routerLinkActive="active"><span class="fa fa-info fa-lg">&nbsp;</span> About</a>
+        <a mat-button routerLink='/services' routerLinkActive="active"><span class="fa fa-list fa-lg">&nbsp;</span>Services</a> 
+        <!-- <a mat-button 
+        routerLink='/services'
+        [matMenuTriggerFor]="services" 
+        (mouseenter)="sTrigger.openMenu()" 
+        (mouseout)="$event.stopPropagation();sTrigger.openMenu()">
+        <a #sTrigger="matMenuTrigger" 
+          [matMenuTriggerFor]="services"><span class="fa fa-list fa-lg">&nbsp;</span>Servicess</a> 
+            </a>
+          <mat-menu #services="matMenu" yPosition="below">
+             <button mat-menu-item>Maintenance Services</button>
+              <button mat-menu-item>Cleaning Services</button> 
+            <button mat-menu-item routerLink='/maintenanceService'>Maintenance Services</button>
+            <button mat-menu-item routerLink='/cleaningService'>Cleaning Services</button> 
+          </mat-menu> -->
+          <a mat-button routerLink='/contactus' routerLinkActive="active"><span class="fa fa-address-card fa-lg">&nbsp;</span> Contact</a>
+      </div>
+    </div>
+  </mat-toolbar-row>
+
+
+  <mat-toolbar-row *ngIf="deviceXs" fxLayoutAlign="space-evenly center">
+    <span><img src="/assets/images/logo.png" height=30 width=30 routerLink='/home'></span>
+    <!-- <a mat-button routerLink='/home'><span class="fa fa-home fa-lg">&nbsp;</span> Home</a> -->
+    <a mat-button routerLink='/aboutus' routerLinkActive="active"><span class="fa fa-info fa-lg">&nbsp;</span> About</a>
+    <a mat-button routerLink='/services' routerLinkActive="active"><span class="fa fa-list fa-lg">&nbsp;</span>Services</a>
+    <a mat-button routerLink='/contactus' routerLinkActive="active"><span class="fa fa-address-card fa-lg">&nbsp;</span> Contact</a>
+  </mat-toolbar-row>
+</mat-toolbar>
   
 
 <div class="container"
@@ -15,6 +44,35 @@ fxLayoutAlign.xs="start center"
 fxLayoutAlign.sm="start center" 
 fxLayoutAlign.gt-sm="start none" 
 fxLayoutGap="10px"
+*ngIf="!deviceXs"
+>
+
+<div fxFlex class="jumbotron bg-cover">
+  <div fxFlex fxFlex fxFlex.gt-sm class="overlay">&nbsp;
+    <div style="position:relative;">
+      <img src="/assets/images/logo.png" height=100 width=100 alt="Logo">
+     </div>&nbsp;
+  <div  class="container">
+    <h1 class="display-3 mb-1" class="heading">HOME CARE</h1>
+  </div>&nbsp;
+  <div class="container">
+    <h2 class="lead">Your property is the most expensive asset you have</h2>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+<div class="container"
+fxLayout="row"
+fxLayout.sm="row" 
+fxLayout.xs="row" 
+fxLayoutAlign.xs="start center"
+fxLayoutAlign.sm="start center" 
+fxLayoutAlign.gt-sm="start none" 
+fxLayoutGap="10px"
+*ngIf="deviceXs"
 >
 
 <div fxFlex class="jumbotron bg-cover">

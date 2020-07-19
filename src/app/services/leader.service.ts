@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Leader } from '../shared/leader';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { baseURL } from '../shared/baseurl';
+import {AngularFireDatabase, AngularFireList, AngularFireObject} from '@angular/fire/database';
 
 
 @Injectable({
@@ -11,7 +11,15 @@ import { baseURL } from '../shared/baseurl';
 })
 export class LeaderService {
 
-  constructor(private http: HttpClient) { }
+  leaders: AngularFireList<Leader>;
+
+  constructor(private http: HttpClient,
+    private angularFireDatabase: AngularFireDatabase) { }
+
+  getLeadersFireList(): AngularFireList<Leader>{
+    this.leaders = this.angularFireDatabase.list('/leadership') as AngularFireList<Leader>;
+    return this.leaders;
+  }
 
   getLeaders(): Observable<Leader[]> {
     return this.http.get<Leader[]>(baseURL + 'leadership');

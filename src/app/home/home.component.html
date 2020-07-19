@@ -1,13 +1,13 @@
 <div class="container"
     fxLayout="row"
-    fxLayout.sm="column"
-    fxLayout.xs="column"
+    fxLayout.sm="row"
+    fxLayout.xs="row"
     fxLayoutAlign.gt-md="center none"
     fxLayoutGap="10px" 
     fxLayoutGap.xs="0">
 
     
-<h1 fxFlex=100  [@expand]>How can we help you?</h1>
+<h1 fxFlex=100  [@expand] class="example">How can we help you?</h1>
 
 
 <!-- <a [routerLink]="['/maintenanceSevice']" routerLinkActive="active">
@@ -17,7 +17,7 @@
 
 
 
-<a mat-button class="mat-button button1" routerLink='/maintenanceService' routerLinkActive="active" fxFlex=20  [@expand]>Maintenance</a>
-<a mat-button class="mat-button button1" routerLink='/cleaningService' routerLinkActive="active"fxFlex=20  [@expand]>Cleaning</a>
+<a mat-button class="mat-button button1 mbutton" routerLink='/maintenanceService' routerLinkActive="active" fxFlex=20  [@expand]>Maintenance</a>
+<a mat-button class="mat-button button1 cbutton" routerLink='/cleaningService' routerLinkActive="active"fxFlex=20  [@expand]>Cleaning</a>
 </div>
 

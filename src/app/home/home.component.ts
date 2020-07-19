@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { flyInOut , expand} from '../animations/app.animation';
 
 @Component({
@@ -15,6 +15,7 @@ import { flyInOut , expand} from '../animations/app.animation';
     ]
 })
 export class HomeComponent implements OnInit {
+
 
   constructor() { }
 

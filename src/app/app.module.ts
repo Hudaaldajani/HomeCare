@@ -13,6 +13,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSelectModule } from '@angular/material/select';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import {MatMenuModule} from '@angular/material/menu';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -47,6 +48,8 @@ import { ServicesComponent } from './services/services.component';
 
 import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { AngularFireStorageModule } from "@angular/fire/storage";
+import { AngularFireDatabaseModule } from "@angular/fire/database";
 import { environment } from 'src/environments/environment';
 
 import { ToastrModule } from 'ngx-toastr';
@@ -70,6 +73,8 @@ import { CommonModule } from '@angular/common';
     CommonModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireDatabaseModule,
     BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,
@@ -88,6 +93,7 @@ import { CommonModule } from '@angular/common';
     MatCheckboxModule,
     MatSlideToggleModule,
     MatSelectModule,
+    MatMenuModule,
     MatProgressSpinnerModule,
     ReactiveFormsModule,
     AgmCoreModule.forRoot({

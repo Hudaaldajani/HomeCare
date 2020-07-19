@@ -35,3 +35,123 @@ mat-list-item a{
 .btn-linkedin{color:#fff!important;background-color:#007bb6!important;}
 .btn-twitter{color:#fff!important;background-color:#55acee!important;}
 .btn-mail{color:#fff!important;background-color:#512DA8!important;}
+
+div{
+    margin: 0px 0px;
+    flex-direction:column;
+    max-width: 100%;
+    place-content: start flex-start;
+    align-items: start;
+    }
+
+div > div{
+        font-weight: bolder;
+        color: #2b1857;
+        font-family: sans-serif;
+        max-height: 90%;
+        flex-direction:column;
+        }
+
+div > div > div{
+    flex-direction: row;
+
+}
+
+div > div > div > div{
+    max-width: 0%;
+}
+
+div > div > div > div > address{
+    width: 600px;
+}
+
+div > div > div > div > div >  p{
+    margin: 0 0 12px;
+    width: 600px;
+}
+
+
+
+/* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1281px)  {
+
+    div{
+        margin: 0px 0px;
+        flex-direction: column;
+       // place-content: left;
+        max-width: 100%;
+        flex-direction:column;
+        place-content: start flex-start;
+        align-items: start;
+       // display: flex;
+        }
+
+    div > div{
+            font-weight: bolder;
+            color: #2b1857;
+            font-family: sans-serif;
+            max-height: 90%;
+            flex-direction:column;
+            }
+
+    div > div > div{
+        flex-direction: row;
+
+    }
+
+    div > div > div > div{
+        max-width: 100%;
+    }
+
+    div > div > div > div > address{
+        width: 300px;
+    }
+
+    div > div > div > div > div >  p{
+        margin: 0 0 12px;
+        width: 300px;
+    }
+    
+}
+
+/* Phones */
+@media only screen and (max-width: 767px) {
+    div{
+        margin: 0px 0px;
+        //padding: 20px 0px;
+        font-family: sans-serif;
+        flex-direction: column;
+        place-content: left;
+       // align-items: center;
+        //height:700px;
+        max-width: 100%;
+        flex-direction:column;
+        }
+
+    div > div{
+            font-weight: bolder;
+            color: #2b1857;
+            font-family: sans-serif;
+            max-height: 90%;
+            flex-direction:column;
+            }
+
+    div > div > div{
+        flex-direction: row;
+
+    }
+
+    div > div > div > div{
+        max-width: 100%;
+    }
+
+    div > div > div > div > address{
+        width: 300px;
+    }
+
+    div > div > div > div > div  > p{
+        margin: 0 0 12px;
+        width: 300px;
+    }
+            
+}

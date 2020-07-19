@@ -7,20 +7,20 @@
     fxLayoutGap.xs="0">
 
  
-      <div fxFlex="24" fxLayout.gt-sm="column">
+      <div fxFlex="24" fxLayout.gt-sm="column" class="fontSize">
         <h2>About Us</h2>
-        <p style="text-align: justify;">Established in 2012 and managed by a team of American Expats,
+        <p style="text-align: justify;text-justify: distribute; hyphens: auto;">Established in 2012 and managed by a team of American Expats,
            we have a reputation as UAE’s most reliable maintenance & cleaning company.
             We are committed to providing our customers with a high quality, professional & cost-effective contract-free service, but know that this means nothing without unbelievable customer focus and support. We pride ourselves on understanding our clients concerns and supplying the friendliest, most approachable and conscientious maintenance service in UAE.</p>
       </div>
       <div fxFlex="5"></div>
   
-  <div fxFlex="20" *ngIf="leaders">
+  <div fxFlex="20" *ngIf="leaders" class="fontSize">
     <h2>Corporate Leadership</h2>
   <mat-list  [@expand]>
     <mat-list-item 
         *ngFor="let leader of leaders">
-        <img matListAvatar src="{{baseURL+leader.image}}" alt={{leader.name}}>
+        <img matListAvatar src={{leader.image}} alt={{leader.name}}>
         <p matLine>{{leader.name}} {{leader.abbr}}</p>
         <p matLine>{{leader.designation}}</p>
     </mat-list-item >
