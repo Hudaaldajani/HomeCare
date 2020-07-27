@@ -8,11 +8,68 @@ agm-map {
 
 
 /* Tablets */
-@media only screen and (min-width: 768px) and (max-width: 1281px)  {
+@media only screen and (max-width: 768px) and (max-height: 1024px) {
   div{
     margin-bottom: 20px;
     flex-direction: column;
     display: flex;
+    }
+
+  div > div.contactus{
+    max-height: 30%;
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+
+  div > div.contactus > h2{
+  // margin: 0 0 16px;
+    margin-bottom: 10px;
+  }
+
+  div > div.contactus > div{
+    flex-direction: column;
+  }
+
+  div > div.contactus > div > div{
+    flex-direction: column;
+  }
+
+  div > div.contactus > div > div > p{
+    margin: 0 0 12px;
+  }
+
+  div > div.buttons{
+    display: flex;
+    flex-direction: row;
+  }
+
+
+  div > div.locationmap{
+    margin-left: 10px;
+  }
+
+  div > div.locationmap > agm-map{
+    width: 400px;
+    height: 400px;
+  }
+
+  div > div.locationmap > agm-map > agm-marker { 
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+    width: 250px;
+  }
+
+}
+
+      /* ipad pro */
+@media only screen and (min-width: 1024px) and (min-height: 1366px){
+
+  div.container{
+    margin-bottom: 20px;
+    flex-direction: column;
+    display: flex;
+    height: 770px;
     }
 
   div > div.contactus{
@@ -97,6 +154,10 @@ agm-map {
   div > div.buttons{
     display: flex;
     flex-direction: row;
+  }
+
+  div > div.locationmap{
+    margin-left: 0px;
   }
 
   div > div.locationmap > agm-map{

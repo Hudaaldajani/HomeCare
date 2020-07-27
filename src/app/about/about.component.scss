@@ -3,6 +3,7 @@
     padding: 20px;
   }
 
+ 
 /* Extra small devices (phones, 600px and down), 600px and up) */
 @media only screen and (max-width: 600px) {
   .fontSize {font-size: 14px;}
@@ -11,19 +12,34 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .fontSize {font-size: 14px;}
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .fontSize {font-size: 14px;}
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .fontSize {font-size: 16px;}
+
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .fontSize {font-size: 16px;}
+
+}
+
+      /* ipad pro */
+@media only screen and (min-width: 1024px) and (min-height: 1366px){
+ 
+  div.container{
+    height: 780px;
+  }
+
+  .fontSize {font-size: 18px;}
+
 }

@@ -86,11 +86,12 @@ div > div.matlist > h4.down{
 
 
       /* Tablets */
-@media only screen and (min-width: 768px) and (max-width: 1281px){
+@media only screen and (max-width: 768px) and (max-height: 1024px){
+
 
         div.container{
           margin-top: 50px;
-          margin-left: 40px;
+          margin-left: 30px;
           height: 590px;
         }
            
@@ -118,6 +119,10 @@ div > div.matlist > h4.down{
           line-height: 0.8;
           font-family: CoquetteW00-Light, sans-serif;
           font-size: 20px; 
+           }
+
+           div.overlay{
+            width: 250px;
            }
 
        div.overlay > img{
@@ -151,12 +156,82 @@ div > div.matlist > h4.down{
 
     }
 
+      /* ipad pro */
+    @media only screen and (min-width: 1024px) and (min-height: 1366px){
+      div.container{
+        margin-top: 30px;
+        margin-left: 100px;
+        height: 750px;
+      }
+
+          
+      div > div.matlist > h4.down{
+        display: none;
+      }
+
+      div > div.matlist > h1{
+        display: none;
+      }
+
+      h1{
+        color: purple;
+        font-weight: bold;
+        text-align: center;
+        line-height: 60px;
+        font-size: 16px; 
+        }
+
+      h2{
+        margin: 0 0 16px;
+        color: black;
+        font-weight: bold;
+        text-align: center;
+        line-height: 0.8;
+        font-family: CoquetteW00-Light, sans-serif;
+        font-size: 20px; 
+         }
+
+         div.overlay{
+          width: 250px;
+         }
+
+     div.overlay > img{
+       width: 250px;
+       height: 200px;
+        }
+
+      div > mat-card {
+          width: 280px;
+          height: 400px;
+        }
+
+        mat-card {
+          width: 300px;
+          height: 300px;
+        }
+
+        mat-card-content > p{
+          max-width:300px;
+          text-align: justify;
+        }
+
+        
+    .listshow{
+      display: none;
+    }
+    .gridshow{
+      display: block;
+    }
+    }
+
     /* Phones */
 @media only screen and (max-width: 767px) {
 
   div.container{
     display: flex;
     height: 400px;
+    margin-top: 10px;
+    margin-left: 0px;
   }
 
   div > div{
@@ -193,13 +268,17 @@ div > div.matlist > h4.down{
       }
       
       div > div.matlist > mat-selection-list > mat-list-option {
-        margin: 2px;
+     //   margin: 2px;
         color:rebeccapurple;
+        margin-right: 0px;
+        width: 95%;
+        margin-top: 0px;
+        margin-bottom: 0px;
       }
       
       div > div.matlist > mat-selection-list > mat-list-option[area-selected="true"] {
         background: rgb(102,51,153);
-        max-width:98%;
+      //  max-width:80%;
       }
       
       div > div.matlist > mat-selection-list > mat-list-option:hover,
@@ -208,7 +287,7 @@ div > div.matlist > h4.down{
          background:rgb(161, 84, 238);
          color:rgb(255,255,255);
          font-weight: normal;
-         max-width:98%;
+       //  max-width:98%;
       }
     
 

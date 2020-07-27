@@ -1,46 +1,47 @@
 
 .mat-button {
-   //margin: auto;
-    position:relative;
-    background-color: #673AB7; /* Green */
-    border: 70px 70px;
-    color: white;
-    padding: 30px 32px;  /* padding: 50px 50px -2px;*/
-    text-align: center;
-    text-decoration: none;
-    //display: inline-block;
-    vertical-align: middle;
-    font-size: 20px;
-    margin: 200px 100px;
-    cursor: pointer;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    border-radius: 10px;
-  }
-  
-  
-  .button1:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-  }
+  //margin: auto;
+   position:relative;
+   background-color: #673AB7; /* Green */
+   border: 70px 70px;
+   color: white;
+   padding: 30px 32px;  /* padding: 50px 50px -2px;*/
+   text-align: center;
+   text-decoration: none;
+   //display: inline-block;
+   vertical-align: middle;
+   font-size: 20px;
+   margin: 200px 100px;
+   cursor: pointer;
+   -webkit-transition-duration: 0.4s; /* Safari */
+   transition-duration: 0.4s;
+   border-radius: 10px;
+ }
+ 
+ 
+ .button1:hover {
+   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+ }
 
-  h1{
-    font-family:CoquetteW00-Light,sans-serif;
-    font-weight: bolder;
-    font-size: 40px;
-    position: absolute;
-    display: flex;
-    margin-left: 10px;
-    padding: 2px 2px;
-    margin: 100px 0%;
-    text-align: justify;
-    vertical-align: middle;
-    max-width: 30%;
-  }
+ h1{
+   font-family:CoquetteW00-Light,sans-serif;
+   font-weight: bolder;
+   font-size: 40px;
+   position: absolute;
+   display: flex;
+   margin-left: 10px;
+   padding: 2px 2px;
+   margin: 100px 0%;
+   text-align: justify;
+   vertical-align: middle;
+   max-width: 30%;
+ }
+
 
 
   
 /* Tablets */
-@media only screen and (min-width: 768px) and (max-width: 1281px)  {
+@media only screen and (max-width: 768px) and (max-height: 1024px){
 
   div{
     height:440px;
@@ -85,12 +86,61 @@
 }
 
 
+      /* ipad pro */
+ @media only screen and (min-width: 1024px) and (min-height: 1366px){
+  div{
+    height:780px;
+    display: flex;
+  }
+
+
+  h1{
+    font-size: 30px;
+    max-height: 100%;
+    max-width: 100%;
+    position:absolute;
+    display: flex;
+    text-align: justify;
+    margin: 30px 35%;
+    }
+
+    div >a.mat-button{
+      margin-left:20%;
+    }
+
+    .mat-button {
+      display: inline-block;
+      min-width: 64px;
+      line-height: 36px;
+      overflow: visible;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      vertical-align: middle;
+      font-size: 20px;
+      margin: 120px 150px;
+      max-height: 20%;
+      padding: 5px 5px 5px 5px;
+      width: 300px;
+      bottom: 10px;
+      height:50px;
+     }
+
+     .cbutton{margin-left:100px;}
+ 
+}
+
+
 /* Phones */
 @media only screen and (max-width: 767px) {
 
   div{
     height:380px;
     display: flex;
+  }
+
+  div >a.mat-button{
+    margin-left:auto;
   }
   
   div > h1{
@@ -114,7 +164,9 @@
       text-decoration: none;
       vertical-align: middle;
       font-size: 16px;
-      margin: 80px 40px 30px 10px;
+      margin-top:80px;
+      margin-left:30px;
+      margin-bottom:20px;
       max-height: 13%;
       padding: 5px 110px 5px 15px;
       width: 300px;
